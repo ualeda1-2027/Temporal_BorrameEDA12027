@@ -1,44 +1,44 @@
 package auxiliar;
 
 
-public class Par <K extends Comparable<K>,V> implements Comparable<Par<K,V>>{
+public class Entrada <K extends Comparable<K>,V> implements Comparable<Entrada<K,V>>{
 	
-	private final K key;
-	private V value;
+	private final K clave;
+	private V valor;
 	
-	public Par(K key, V value) {
-		this.key = key;
-		this.value = value;
+	public Entrada(K clave, V valor) {
+		this.clave = clave;
+		this.valor = valor;
 	}
 
-	public K getKey() {
-		return this.key;
+	public K getClave() {
+		return this.clave;
 	}
 
-	public V getValue() {
-		return this.value;
+	public V getValor() {
+		return this.valor;
 	}
 	
-	public V setValue(V value) {
-		V oldValue = this.value;
-		this.value = value;
+	public V setValor(V valor) {
+		V oldValue = this.valor;
+		this.valor = valor;
 		return oldValue;
 	}
 	
 	@Override
 	public String toString() {
-		return key + " <" + value + ">";
+		return clave + " <" + valor + ">";
 	}
 
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
-		if (!(o instanceof Par)) return false;
-		return this.key.equals(((Par<?,?>)o).key);
+		if (!(o instanceof Entrada)) return false;
+		return this.clave.equals(((Entrada<?,?>)o).clave);
 	}
 	
 	@Override
-	public int compareTo(Par<K,V> other) {
-		return this.key.compareTo(other.key);
+	public int compareTo(Entrada<K,V> other) {
+		return this.clave.compareTo(other.clave);
 	}
 }
