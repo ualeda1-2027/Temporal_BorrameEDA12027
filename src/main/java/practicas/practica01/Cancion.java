@@ -13,6 +13,7 @@ public class Cancion {
 	 
 	 public Cancion(String...values) {
 		 //7 líneas
+		 //Revisa el método Format.formatFecha() existente en el paquete auxiliar. Te hará falta.
 		 //...
 	 }
 	 
